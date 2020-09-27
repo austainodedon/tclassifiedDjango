@@ -77,7 +77,7 @@ TINYMCE_DEFAULT_CONFIG = {
     }
 
 MIDDLEWARE = [
-    'whilenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
