@@ -31,7 +31,7 @@ SECRET_KEY = 'b&n8v(j%lkp_9oa^ym6x__^$641n)t=^-cmw(y58%w1xqj$4u*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tclassified.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['206.189.199.2', 'tclassified.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -111,13 +111,26 @@ WSGI_APPLICATION = 'onlineschool.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'onlineschooluser',
+        'USER': 'onlineschool',
+        'PASSWORD': 'password123',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -156,5 +169,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
