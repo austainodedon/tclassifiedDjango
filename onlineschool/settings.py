@@ -117,8 +117,8 @@ WSGI_APPLICATION = 'onlineschool.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'onlineschooluser',
-        'USER': 'onlineschool',
+        'NAME': 'onlineschool',
+        'USER': 'onlineschooluser',
         'PASSWORD': 'password123',
         'HOST': 'localhost',
         'PORT': '',
